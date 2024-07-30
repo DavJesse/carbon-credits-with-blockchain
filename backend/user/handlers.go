@@ -1,18 +1,27 @@
 package user
 
 import (
-	"context"
-	"encoding/json"
 	"net/http"
 	"text/template"
-	"time"
-
-	"carbo-cred/backend/database"
-
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
-	"golang.org/x/crypto/bcrypt"
 )
 
 var registerTmpl = template.Must(template.ParseFiles("../frontend/register.html"))
 var loginTmpl = template.Must(template.ParseFiles("../frontend/login.html"))
+
+// ShowRegisterPage renders the registration page
+func ShowRegisterPage(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
+	}
+	registerTmpl.Execute(w, nil)
+}
+
+// ShowLoginPage renders the login page
+func ShowLoginPage(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
+	}
+	loginTmpl.Execute(w, nil)
+}
