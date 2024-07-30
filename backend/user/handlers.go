@@ -1,17 +1,23 @@
 package user
 
 import (
-    "context"
-    "encoding/json"
-    "net/http"
-    "time"
+	"context"
+	"encoding/json"
+	"html/template"
+	"net/http"
+	"time"
 
-    "carbo-cred/backend/database"
+	"carbo-cred/backend/database"
 
-    "go.mongodb.org/mongo-driver/bson"
-    "go.mongodb.org/mongo-driver/mongo"
-    "golang.org/x/crypto/bcrypt"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"golang.org/x/crypto/bcrypt"
 )
+
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+    tmpl := template.Must(template.ParseFiles("/home/johnotieno0/hackathon/carbon-credits-with-blockchain/frontend/site/index.html"))
+    tmpl.Execute(w, nil)
+}
 
 // RegisterUser handles user registration
 func RegisterUser(w http.ResponseWriter, r *http.Request) {
