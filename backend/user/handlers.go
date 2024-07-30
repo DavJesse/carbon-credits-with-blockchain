@@ -3,8 +3,13 @@ package user
 import (
 	"context"
 	"encoding/json"
+<<<<<<< HEAD
+	"html/template"
+	"net/http"
+=======
 	"net/http"
 	"text/template"
+>>>>>>> master
 	"time"
 
 	"carbo-cred/backend/database"
@@ -14,6 +19,14 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+<<<<<<< HEAD
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+    tmpl := template.Must(template.ParseFiles("/home/johnotieno0/hackathon/carbon-credits-with-blockchain/frontend/site/index.html"))
+    tmpl.Execute(w, nil)
+}
+
+// RegisterUser handles user registration
+=======
 // Get the absolute path of the templates
 // func getTemplatePath(relativePath string) string {
 // 	_, b, _, _ := runtime.Caller(0)
@@ -32,6 +45,7 @@ var loginTmpl = template.Must(template.ParseFiles("/home/davodhiambo/github/carb
 // }
 
 // RegisterUser handles user registration and shows registration page
+>>>>>>> master
 func RegisterUser(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		registerTmpl.Execute(w, nil)
