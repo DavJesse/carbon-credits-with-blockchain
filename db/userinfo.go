@@ -1,32 +1,34 @@
-package db
-
 import (
+    "context"
     "log"
+    "os"
     "time"
-
-    "github.com/couchbase/gocb/v2"
+    "github.com/joho/godotenv"
+    "go.mongodb.org/mongo-driver/mongo"
+    "go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var Cluster *gocb.Cluster
-var Collection *gocb.Collection
-
 func InitDB() {
-    var err error
-    Cluster, err = gocb.Connect("couchbase://localhost", gocb.ClusterOptions{
-        Username: "yourusername",
-        Password: "yourpassword",
-    })
+    err := godotenv.Load()
     if err != nil {
-        log.Fatalf("Error connecting to Couchbase: %v", err)
+        log.Fatalf("Error loading .env file")
     }
 
-    bucket := Cluster.Bucket("yourbucket")
+    mongoURI := os.Getenv("MONGO_URI")
+    clientOptions := options.Client().ApplyURI(mongoURI)
 
-    // Wait until the bucket is ready
-    err = bucket.WaitUntilReady(5 * time.Second, nil)
+    client, err := mongo.Connect(context.Background(), clientOptions)
     if err != nil {
-        log.Fatalf("Error connecting to bucket: %v", err)
+        log.Fatalf("Error connecting to MongoDB: %v", err)
     }
 
-    Collection = bucket.DefaultCollection()
+    // Test connection
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+    err = client.Ping(ctx, nil)
+    if err != nil {
+        log.Fatalf("Error pinging MongoDB: %v", err)
+    }
+
+    log.Println("Connected to MongoDB!")
 }
