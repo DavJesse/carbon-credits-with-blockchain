@@ -8,8 +8,8 @@
 /* Body styles */
 body {
     margin: 0;
-    color: #6a6f8c;
-    background: url('images/loginbackground.jpg') no-repeat center center fixed;
+    color: #203ddf;
+    background: #dde7dc ;
     background-size: cover; /* Ensure background covers the entire body */
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 .header h1 {
-    color: #fff; /* Adjust as needed for contrast */
+    color: #07080ce4; /* Adjust as needed for contrast */
     font-size: 2.5em;
 }
 
@@ -34,8 +34,8 @@ body {
     border-radius: 50px;
     border-color: #3a5337;
     position: relative;
-    background: transparent; /* Semi-transparent background for the login area */
-    box-shadow: 0 12px 15px 0 rgba(185, 26, 26, 0.24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    background:  #032d5d; /* Semi-transparent background for the login area */
+    box-shadow: 0 12px 15px 0 rgba(148, 68, 68, 0.24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 /* Adjustments for different screen sizes */
@@ -108,8 +108,8 @@ body {
 
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab {
-    color: #181918;
-    border-color: #030304;
+    color: #f6f6f6;
+    border-color: #eaeaf1;
 }
 
 .login-form {
@@ -145,7 +145,7 @@ body {
 }
 
 .login-form .group .label {
-    color: #060000;
+    color: #f4efef;
     font-size: 15px;
 }
 
@@ -167,7 +167,7 @@ body {
     content: '';
     width: 10px;
     height: 2px;
-    background: #5a0e0e;
+    background: #0c0c0c;
     position: absolute;
     transition: all .2s ease-in-out 0s;
 }
@@ -186,7 +186,7 @@ body {
 }
 
 .login-form .group .check:checked + label {
-    color: #fff;
+    color: #0d00ff;
 }
 
 .login-form .group .check:checked + label .icon {
@@ -223,7 +223,7 @@ body {
     border: none;
     padding: 10px 5 px;
     border-radius: 25px;
-    background: #1b61d9;
+    background: #000000;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -232,13 +232,13 @@ body {
 }
 
 .login-form .group .button:hover {
-    background: #0d4d9b;
+    background: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-form .group .button:active {
-    background: #0b3e7a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: #060ddbec;
+    box-shadow: 0 2px 4px rgba(222, 229, 237, 0.3);
     transform: translateY(2px);
 }
 
