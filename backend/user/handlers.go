@@ -3,13 +3,8 @@ package user
 import (
 	"context"
 	"encoding/json"
-<<<<<<< HEAD
-	"html/template"
-	"net/http"
-=======
 	"net/http"
 	"text/template"
->>>>>>> master
 	"time"
 
 	"carbo-cred/backend/database"
@@ -31,7 +26,6 @@ func ServeHomePage(w http.ResponseWriter, r *http.Request) {
 }
 
 // RegisterUser handles user registration and shows registration page
->>>>>>> master
 func RegisterUser(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		registerTmpl.Execute(w, nil)
