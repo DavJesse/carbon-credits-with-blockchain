@@ -1,7 +1,7 @@
 package main
 
 import (
-	"carbomoney/blockchain"
+	"carbomoney/backend/blockchain"
 	"fmt"
 )
 
