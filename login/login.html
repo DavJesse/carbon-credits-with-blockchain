@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header">
-        <h>CARBON CREDIT WITH BLOCKCHAIN</h>
+        <h1>CARBON CREDIT WITH BLOCKCHAIN</h1>
     </div>
     <div class="login-wrap">
         <div class="login-html">
@@ -21,21 +21,21 @@
             <div class="login-form">
                 <!-- Sign In Form -->
                 <div class="sign-in-htm">
-                    <form id="sign-in-form">
+                    <form id="sign-in-form" action="/login" method="POST">
                         <div class="group">
                             <label for="signin-user" class="label">Username</label>
-                            <input id="signin-user" type="text" class="input" required>
+                            <input id="signin-user" name="username" type="text" class="input" required>
                         </div>
                         <div class="group">
                             <label for="signin-pass" class="label">Password</label>
-                            <input id="signin-pass" type="password" class="input" data-type="password" required>
+                            <input id="signin-pass" name="password" type="password" class="input" data-type="password" required>
                         </div>
                         <div class="group">
                             <input id="signin-check" type="checkbox" class="check" checked>
                             <label for="signin-check"><span class="icon"></span> Keep me Signed in</label>
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign In" disabled>
+                            <input type="submit" class="button" value="Sign In">
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -46,25 +46,25 @@
 
                 <!-- Sign Up Form -->
                 <div class="sign-up-htm">
-                    <form id="sign-up-form">
+                    <form id="sign-up-form" action="/register" method="POST">
                         <div class="group">
                             <label for="signup-user" class="label">Username</label>
-                            <input id="signup-user" type="text" class="input" required>
+                            <input id="signup-user" name="username" type="text" class="input" required>
                         </div>
                         <div class="group">
                             <label for="signup-pass" class="label">Password</label>
-                            <input id="signup-pass" type="password" class="input" data-type="password" required>
+                            <input id="signup-pass" name="password" type="password" class="input" data-type="password" required>
                         </div>
                         <div class="group">
                             <label for="signup-repeat-pass" class="label">Repeat Password</label>
-                            <input id="signup-repeat-pass" type="password" class="input" data-type="password" required>
+                            <input id="signup-repeat-pass" name="repeat_password" type="password" class="input" data-type="password" required>
                         </div>
                         <div class="group">
                             <label for="signup-email" class="label">Email Address</label>
-                            <input id="signup-email" type="email" class="input" required>
+                            <input id="signup-email" name="email" type="email" class="input" required>
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign Up" disabled>
+                            <input type="submit" class="button" value="Sign Up">
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -94,6 +94,6 @@
     </div>
 
     <!-- Link to external JavaScript file -->
-    <script src="scripts.js"></script>
+    <script src="static/scripts.js"></script>
 </body>
 </html>
