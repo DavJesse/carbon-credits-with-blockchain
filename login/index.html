@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Credit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h>CARBON CREDIT WITH BLOCKCHAIN</h>
+    </div>
+    <div class="login-wrap">
+        <div class="login-html">
+            <!-- Tabs -->
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Sign Up</label>
+
+            <div class="login-form">
+                <!-- Sign In Form -->
+                <div class="sign-in-htm">
+                    <form id="sign-in-form">
+                        <div class="group">
+                            <label for="signin-user" class="label">Username</label>
+                            <input id="signin-user" type="text" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signin-pass" class="label">Password</label>
+                            <input id="signin-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <input id="signin-check" type="checkbox" class="check" checked>
+                            <label for="signin-check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In" disabled>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a id="forgot-password-link" href="#">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="sign-up-htm">
+                    <form id="sign-up-form">
+                        <div class="group">
+                            <label for="signup-user" class="label">Username</label>
+                            <input id="signup-user" type="text" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-pass" class="label">Password</label>
+                            <input id="signup-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-repeat-pass" class="label">Repeat Password</label>
+                            <input id="signup-repeat-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-email" class="label">Email Address</label>
+                            <input id="signup-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up" disabled>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Forgot Password Form -->
+                <div id="forgot-password-htm" class="forgot-password-htm">
+                    <form id="forgot-password-form">
+                        <div class="group">
+                            <label for="forgot-email" class="label">Email Address</label>
+                            <input id="forgot-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Submit">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#" id="back-to-sign-in">Back to Sign In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="scripts.js"></script>
+</body>
+</html>
