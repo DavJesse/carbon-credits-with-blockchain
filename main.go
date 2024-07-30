@@ -1,6 +1,8 @@
 package main
 
 import (
+	"carbo-cred/server"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -14,6 +16,7 @@ type User struct {
 }
 
 func registerUser(w http.ResponseWriter, r *http.Request) {
+	//fmt.Fprintf(w, "log in", http.StatusAccepted)
 	// Registration logic
 }
 
@@ -22,6 +25,8 @@ func loginUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	server.InitDB()
+
 	http.HandleFunc("/register", registerUser)
 	http.HandleFunc("/login", loginUser)
 	log.Fatal(http.ListenAndServe(":8080", nil))
