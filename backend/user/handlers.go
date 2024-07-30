@@ -14,22 +14,16 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// Get the absolute path of the templates
-// func getTemplatePath(relativePath string) string {
-// 	_, b, _, _ := runtime.Caller(0)
-// 	basePath := filepath.Dir(b)
-// 	return filepath.Join(basePath, relativePath)
-// }
+
 
 // Templates
-var registerTmpl = template.Must(template.ParseFiles("/home/davodhiambo/github/carbon-credits-with-blockchain/server/register.html"))
+var registerTmpl = template.Must(template.ParseFiles("/home/davodhiambo/github/carbon-credits-with-blockchain/login/login.html"))
 var loginTmpl = template.Must(template.ParseFiles("/home/davodhiambo/github/carbon-credits-with-blockchain/login/login.html"))
+var homeTmpl = template.Must(template.ParseFiles("/home/davodhiambo/github/carbon-credits-with-blockchain/frontend/index.html"))
 
-// User struct
-// type User struct {
-// 	Username string `json:"username"`
-// 	Password string `json:"password"`
-// }
+func ServeHomePage(w http.ResponseWriter, r *http.Request) {
+    homeTmpl.Execute(w, nil)
+}
 
 // RegisterUser handles user registration and shows registration page
 func RegisterUser(w http.ResponseWriter, r *http.Request) {

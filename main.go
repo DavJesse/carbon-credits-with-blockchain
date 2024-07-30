@@ -9,9 +9,9 @@ import (
 func main() {
 	database.InitDB()
 
-	http.Handle("/static/",http.StripPrefix("/static/", http.FileServer(http.Dir("login"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("login"))))
 	http.HandleFunc("/register", user.RegisterUser)
-//	http.HandleFunc("/login", user.ShowLoginPage)
+	http.HandleFunc("/", user.ServeHomePage)
 	http.HandleFunc("/login", user.LoginUser)
 
 	http.ListenAndServe(":8080", nil)
