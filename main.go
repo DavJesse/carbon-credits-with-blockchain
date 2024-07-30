@@ -1,33 +1,16 @@
 package main
 
 import (
-	"carbo-cred/server"
-	"fmt"
+	"carbo-cred/db"
+	"carbo-cred/user"
 	"log"
 	"net/http"
-
-	_ "github.com/lib/pq"
 )
 
-type User struct {
-	ID       int    `json:"id"`
-	Username string `json:"username"`
-	Password string `json:"password"`
-}
-
-func registerUser(w http.ResponseWriter, r *http.Request) {
-	//fmt.Fprintf(w, "log in", http.StatusAccepted)
-	// Registration logic
-}
-
-func loginUser(w http.ResponseWriter, r *http.Request) {
-	// Login logic
-}
-
 func main() {
-	server.InitDB()
+	db.InitDB()
 
-	http.HandleFunc("/register", registerUser)
-	http.HandleFunc("/login", loginUser)
+	http.HandleFunc("/register", user.RegisterUser)
+	http.HandleFunc("/login", user.LoginUser)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
