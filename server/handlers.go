@@ -1,3 +1,10 @@
+package server
+
+import (
+	"log"
+	"net/http"
+)
+
 type CarbonCredit struct {
 	ID                 int    `json:"id"`
 	Issuer             string `json:"issuer"`
