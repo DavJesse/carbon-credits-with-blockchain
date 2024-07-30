@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Credits Marketplace</title>
+    <script src="https://unpkg.com/htmx"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +23,8 @@
         <section id="hero">
             <h1>Welcome to the Carbon Credits Marketplace</h1>
             <p>Buy and sell carbon credits easily and securely.</p>
-            <a href="marketplace.html" class="btn">Get Started</a>
+            <button hx-get="/buyer">I'm a Buyer</button>
+            <button hx-get="/seller">I'm a Seller</button>
         </section>
     </main>
     <footer>
