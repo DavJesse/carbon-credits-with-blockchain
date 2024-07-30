@@ -1,14 +1,14 @@
 package main
 
 import (
-	"carbo-cred/db"
-	"carbo-cred/user"
+	"carbo-cred/backend/database"
+	"carbo-cred/backend/user"
 	"log"
 	"net/http"
 )
 
 func main() {
-	db.InitDB()
+	database.InitDB()
 
 	http.HandleFunc("/register", user.RegisterUser)
 	http.HandleFunc("/login", user.LoginUser)
