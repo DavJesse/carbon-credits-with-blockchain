@@ -6,10 +6,11 @@ import (
     "net/http"
     "time"
 
-    "golang.org/x/crypto/bcrypt"
+    "carbo-cred/db"
+
     "go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/mongo"
-    "carbo-cred/db"
+    "golang.org/x/crypto/bcrypt"
 )
 
 // RegisterUser handles user registration

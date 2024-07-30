@@ -1,11 +1,7 @@
 package user
 
-import (
-    "go.mongodb.org/mongo-driver/bson/primitive"
-)
-
+// User represents the user structure
 type User struct {
-    ID       primitive.ObjectID `bson:"_id,omitempty" json:"id"`
-    Username string             `bson:"username" json:"username"`
-    Password string             `bson:"password" json:"password"`
+    Username string `json:"username"`
+    Password string `json:"password"`
 }
