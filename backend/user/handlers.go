@@ -5,8 +5,8 @@ import (
 	"text/template"
 )
 
-var registerTmpl = template.Must(template.ParseFiles("../frontend/register.html"))
-var loginTmpl = template.Must(template.ParseFiles("../frontend/login.html"))
+var registerTmpl = template.Must(template.ParseFiles("register.html"))
+var loginTmpl = template.Must(template.ParseFiles("login.html"))
 
 // ShowRegisterPage renders the registration page
 func ShowRegisterPage(w http.ResponseWriter, r *http.Request) {
