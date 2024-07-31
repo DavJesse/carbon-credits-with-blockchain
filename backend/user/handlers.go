@@ -20,7 +20,7 @@ import (
 var (
     registerTmpl = template.Must(template.ParseFiles("login/login.html"))
     loginTmpl = template.Must(template.ParseFiles("login/login.html"))
-    homeTmpl = template.Must(template.ParseFiles("frontend/index.html"))
+    homeTmpl = template.Must(template.ParseFiles("index.html"))
 )
 
 func ServeHomePage(w http.ResponseWriter, r *http.Request) {
