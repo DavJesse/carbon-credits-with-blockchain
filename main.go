@@ -8,7 +8,7 @@ import (
 
 func main() {
 	database.InitDB()
-
+	
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("login"))))
 	http.HandleFunc("/register", user.RegisterUser)
 	http.HandleFunc("/", user.ServeHomePage)
