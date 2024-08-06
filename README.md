@@ -1,38 +1,28 @@
-# Solar Carbon Credits Marketplace
+# Carbo Cred
+Welcome to the Carbo Cred Marketplace! 
 
-Welcome to the Solar Carbon Credits Marketplace! This platform enables solar panel owners to estimate their carbon credits and sell them to buyers interested in offsetting their emissions. 
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [How It Works](#how-it-works)
-  - [Estimating Carbon Credits](#estimating-carbon-credits)
-  - [Verification and Certification](#verification-and-certification)
-  - [Facilitating the Sale of Carbon Credits](#facilitating-the-sale-of-carbon-credits)
-- [Getting Started](#getting-started)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Support and Resources](#support-and-resources)
-- [Contributing](#contributing)
-- [License](#license)
+## Description
+This platform creates awareness of carbon credits and how they can be sold.
 
 ## Introduction
 
-Our marketplace empowers solar panel owners to monetize their renewable energy contributions by selling carbon credits. By participating, you help reduce global CO2 emissions and support sustainable energy solutions.
+Carbon credits are permits that allow the owner to emit a certain amount of carbon dioxide or other greenhouse gases (GHGs). One credit allows the emission of one ton of carbon dioxide or the equivalent of other greenhouse gases. Carbon credits are also known as carbon offsets.
+
+The marketplace empowers individuals and company owners to monetize their renewable energy contributions by selling carbon credits. By participating, this way they help reduce global CO2 emissions and support sustainable energy solutions.
+
+Carbo Cred will always act as a link/ intermidiate  between the sub-seller/seller
 
 ## Features
 
-- **Estimate Carbon Credits:** Calculate the carbon emissions reduced by your solar panels.
-- **Verification and Certification:** Get your emissions reductions verified and certified by reputable third-party organizations.
+- **Estimate Carbon Credits:** Calculate the carbon emissions reduced by individuals and companies.
+- **Verification and Certification:** Ensures that companies or individuals who are emmitting CO2 gasses are verified, and can only release upto a certain amount of it to the environment.
 - **Marketplace for Selling Carbon Credits:** Connect with buyers looking to offset their carbon footprint.
 
 ## How It Works
 
 ### Estimating Carbon Credits
 
-1. **Collect Data:** Provide information about your solar panels, including the number, capacity (in watts), and average electricity generation.
+1. **Collect Data:** Provide information about those using solar panels, records about tree planting and existing trees that help absorb the CO2 in the environment.
 2. **Calculate Emissions Reduction:** Use the collected data to determine the amount of CO2 emissions reduced.
    - Formula: 
      \[
@@ -49,7 +39,7 @@ Our marketplace empowers solar panel owners to monetize their renewable energy c
 
 ### Facilitating the Sale of Carbon Credits
 
-1. **Create a Platform:** Register your solar panels, submit data, and apply for verification and certification.
+1. **Create a Platform:** Register your details, submit the data, and apply for verification and certification.
 2. **Educate and Support:** Access resources and support throughout the process.
 3. **Connect with Buyers:** Engage with companies and individuals interested in buying carbon credits.
 4. **Market and Promote:** Attract both sellers and buyers by highlighting the benefits of participating in the marketplace.
